@@ -21,7 +21,7 @@ const viewAllRoles = () => {
 };
 
 const viewAllEmployees = () => {
-  db.query("SELECT * FROM employee", (err, results) => {
+  db.query(`SELECT employee.id AS employee_id, first_name, last_name, title, salary, manager_id, department.name AS department_name FROM employee LEFT JOIN role ON employee.role_id = role.id LEFT JOIN department ON role.department_id = department.id;`, (err, results) => {
     if (err) throw err;
     console.table(results);
     start();

@@ -12,6 +12,9 @@ This is a simple employee management system that allows you to add, edit, delete
 1. Run `npm start` to start the application
 2. Follow the prompts to add, edit, delete and view employees
 
+## Video Walkthrough
+[![Video Walkthrough](https://img.youtube.com/vi/1Q2Q3Q4Q5Q6/0.jpg)](https://youtu.be/ctrQksD53PU)
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

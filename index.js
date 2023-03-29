@@ -10,11 +10,14 @@ const viewAllDepartments = () => {
 };
 
 const viewAllRoles = () => {
-  db.query("SELECT * FROM role", (err, results) => {
-    if (err) throw err;
-    console.table(results);
-    start();
-  });
+  db.query(
+    `SELECT role.id AS role_id, title, salary AS role_salary, department.name AS department_name FROM role LEFT JOIN department ON role.department_id = department.id`,
+    (err, results) => {
+      if (err) throw err;
+      console.table(results);
+      start();
+    }
+  );
 };
 
 const viewAllEmployees = () => {
